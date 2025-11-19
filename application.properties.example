@@ -1,0 +1,23 @@
+# Example configuration for direccions-lib
+# Copy this file to your application's application.properties
+
+# Database configuration
+spring.datasource.url=jdbc:postgresql://localhost:5432/your_database
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA/Hibernate configuration
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.show-sql=false
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+
+# Direccions library configuration
+# Specify the schema where direccions tables are located
+# Default: public
+direccions.schema=public
+
+# Examples of custom schemas:
+# direccions.schema=maestros
+# direccions.schema=md_produccion
+# direccions.schema=datos_maestros
