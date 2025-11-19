@@ -80,9 +80,32 @@ spring:
     hibernate:
       ddl-auto: none
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+# Opcional: Configurar el schema de la base de datos
+direccions:
+  schema: public  # Por defecto es "public"
 ```
 
-### 2. Habilitar Auto-configuración
+### 2. Configuración del Schema de Base de Datos
+
+La librería permite configurar el schema donde están ubicadas las tablas de direcciones. Esto es útil cuando se trabaja con datos maestros que pueden estar en un schema diferente al predeterminado.
+
+**Por defecto:** Si no se especifica, se usa el schema `public`.
+
+**Personalizar:** Para usar un schema personalizado, añade la siguiente configuración:
+
+```yaml
+direccions:
+  schema: mi_schema_maestros
+```
+
+O en `application.properties`:
+
+```properties
+direccions.schema=mi_schema_maestros
+```
+
+### 3. Habilitar Auto-configuración
 
 La librería se auto-configura automáticamente. Solo necesitas añadir la dependencia y configurar la base de datos.
 
