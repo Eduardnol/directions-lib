@@ -98,7 +98,7 @@ publishing {
                 password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
             }
         }
-        
+        /*
         maven {
             name = "privateRepo"
             url = uri("https://your-private-repo.com/repository/maven-public/")
@@ -107,6 +107,7 @@ publishing {
                 password = project.findProperty("repo.password") ?: System.getenv("REPO_PASSWORD")
             }
         }
+        */
     }
 }
 
