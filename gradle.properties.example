@@ -1,0 +1,19 @@
+# Gradle Properties for Publishing
+# Copy this file to gradle.properties and fill with your repository credentials
+
+# GitHub Packages
+gpr.user=your-github-username
+gpr.key=your-github-token
+
+# Private Repository
+repo.user=your-repo-username
+repo.password=your-repo-password
+
+# Maven Central (if needed)
+ossrhUsername=your-ossrh-username
+ossrhPassword=your-ossrh-password
+
+# Signing (for Maven Central)
+signing.keyId=your-key-id
+signing.password=your-signing-password
+signing.secretKeyRingFile=path/to/your/secring.gpg
