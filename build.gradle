@@ -7,7 +7,7 @@ plugins {
 
 group = 'io.eduardnol'
 version = '0.0.6'
-sourceCompatibility = '21'
+sourceCompatibility = '17'
 
 configurations {
     compileOnly {
