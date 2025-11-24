@@ -51,16 +51,16 @@ BUILD SUCCESSFUL in 1s
 ### Gradle
 
 ```gradle
-implementation 'io.eduardnol:direccions-lib:1.0.0'
+implementation("io.github.eduardnol:direccions-lib:0.0.11")
 ```
 
 ### Maven
 
 ```xml
 <dependency>
-    <groupId>io.eduardnol</groupId>
+    <groupId>io.github.eduardnol</groupId>
     <artifactId>direccions-lib</artifactId>
-    <version>1.0.0</version>
+    <version>0.0.11</version>
 </dependency>
 ```
 
