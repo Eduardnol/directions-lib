@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: Direccions Library
+Implementation-Version: 0.0.9
+Implementation-Vendor: Eduardo Nolla
+Implementation-URL: https://github.com/eduardnol/direccions-lib
