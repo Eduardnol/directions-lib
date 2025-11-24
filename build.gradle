@@ -64,7 +64,6 @@ bootJar {
 // Configure Vanniktech Maven Publish Plugin for Maven Central
 mavenPublishing {
     publishToMavenCentral()
-    
     signAllPublications()
     
     coordinates(group.toString(), 'direccions-lib', version.toString())
