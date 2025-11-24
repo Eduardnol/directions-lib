@@ -64,21 +64,18 @@ bootJar {
 // Publishing configuration
 publishing {
     publications {
-        maven(MavenPublication) {
+        mavenCentral(MavenPublication) {
             from components.java
-            
             pom {
                 name = 'Direccions Library'
                 description = 'Librería reutilizable para gestión de direcciones'
                 url = 'https://github.com/eduardnol/direccions-lib'
-                
                 licenses {
                     license {
                         name = 'The Apache License, Version 2.0'
                         url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
                     }
                 }
-                
                 developers {
                     developer {
                         id = 'eduardnol'
@@ -86,7 +83,36 @@ publishing {
                         email = 'dev@github'
                     }
                 }
-
+                scm {
+                    connection = 'scm:git:git://github.com/eduardnol/direccions-lib.git'
+                    developerConnection = 'scm:git:ssh://github.com:eduardnol/direccions-lib.git'
+                    url = 'https://github.com/eduardnol/direccions-lib'
+                }
+                organization {
+                    name = 'Eduardo Nolla'
+                    url = 'https://github.com/eduardnol'
+                }
+            }
+        }
+        github(MavenPublication) {
+            from components.java
+            pom {
+                name = 'Direccions Library'
+                description = 'Librería reutilizable para gestión de direcciones'
+                url = 'https://github.com/eduardnol/direccions-lib'
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'eduardnol'
+                        name = 'Eduardo Nolla'
+                        email = 'dev@github'
+                    }
+                }
                 scm {
                     connection = 'scm:git:git://github.com/eduardnol/direccions-lib.git'
                     developerConnection = 'scm:git:ssh://github.com:eduardnol/direccions-lib.git'
@@ -117,21 +143,6 @@ publishing {
                 password = project.findProperty("ossrhPassword") ?: System.getenv("OSSRH_PASSWORD")
             }
         }
-        /*
-        maven {
-            name = "privateRepo"
-            // Firma de artefactos para Maven Central
-            signing {
-                required { gradle.taskGraph.hasTask("publish") }
-                sign publishing.publications.maven
-            }
-            url = uri("https://your-private-repo.com/repository/maven-public/")
-            credentials {
-                username = project.findProperty("repo.user") ?: System.getenv("REPO_USER")
-                password = project.findProperty("repo.password") ?: System.getenv("REPO_PASSWORD")
-            }
-        }
-        */
     }
 }
 
