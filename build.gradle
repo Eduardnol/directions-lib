@@ -63,7 +63,7 @@ bootJar {
 
 // Configure Vanniktech Maven Publish Plugin for Maven Central
 mavenPublishing {
-    publishToMavenCentral(com.vanniktech.maven.publish.SonatypeHost.CENTRAL_PORTAL)
+    publishToMavenCentral()
     
     signAllPublications()
     
@@ -99,39 +99,6 @@ mavenPublishing {
 
 // GitHub Packages publishing (separado del plugin de Vanniktech)
 publishing {
-    publications {
-        github(MavenPublication) {
-            from components.java
-            
-            pom {
-                name = 'Direccions Library'
-                description = 'Librería reutilizable para gestión de direcciones'
-                url = 'https://github.com/eduardnol/direccions-lib'
-                
-                licenses {
-                    license {
-                        name = 'The Apache License, Version 2.0'
-                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-                
-                developers {
-                    developer {
-                        id = 'eduardnol'
-                        name = 'Eduardo Nolla'
-                        email = 'dev@github'
-                    }
-                }
-                
-                scm {
-                    connection = 'scm:git:git://github.com/eduardnol/direccions-lib.git'
-                    developerConnection = 'scm:git:ssh://github.com:eduardnol/direccions-lib.git'
-                    url = 'https://github.com/eduardnol/direccions-lib'
-                }
-            }
-        }
-    }
-    
     repositories {
         maven {
             name = "GitHubPackages"
